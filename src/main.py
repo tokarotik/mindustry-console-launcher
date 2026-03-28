@@ -1,17 +1,17 @@
-"""from .ui.console_input.console import Console
+from src.libs.ui.console_input.console import Console
 
-print("\""Hello User,
+print("""Hello User,
     You have launched the unofficial Mindustry launcher.
     To exit the launcher type 'exit' or 'stop'.
     Or use Ctr+C(Windows) or Ctr+Z(Linux-like systems).
 
     gl bro <:
     
-Made by HalvaNyashka""\")
+Made by HalvaNyashka""")
 
 console = Console()
 console.run()
-"""
+"""exit()
 
 
 import os
@@ -48,4 +48,4 @@ responser.download(
     version, 
     file,
     assets
-)
+)"""

@@ -3,7 +3,8 @@ from .commander import Commander, CommanderResult
 
 class Console:
     def __init__(self) -> None:
-        self.parser = Parser()
+        self.parser: Parser = Parser()
+        self.commander: Commander = Commander()
     
     def run(self) -> None:
         while True:
@@ -20,4 +21,8 @@ class Console:
         parsed: ParserResult = self.parser.parse(inp)
         if parsed.isError(): return
         
+        command: CommanderResult = self.commander.handle(parsed)
+        if command.isError():
+            print(f'err: {command.getError()}')
+            return
         

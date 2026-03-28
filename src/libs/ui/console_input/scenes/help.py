@@ -1,7 +1,8 @@
 from ....releases.responser import Responser
 
-class SceneBase:
+from .scene_base import  SceneBase
+
+class Help(SceneBase):
     def __init__(self, responser: Responser) -> None:
-        self.responser: Responser = responser
+        super().__init__(responser)
     
-    def run(self) -> None: pass
